@@ -50,8 +50,15 @@ public class BoardServiceImpl implements BoardService {
 		logger.info(" 게시판 리스트 조회(all) 기능 호출 완료 ");
 		return boardList;
 	}
-	
-	
+
+
+	@Override
+	public BoardVO getBoard(int bno) throws Exception {
+		logger.info(" getBoard(int bno) 실행 ");
+		
+		return bDao.boardSelect(bno);
+		
+	}
 	
 	
 	
