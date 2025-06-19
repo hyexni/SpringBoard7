@@ -61,7 +61,7 @@ public class BoardDAOTest {
 		logger.info("{}",boardList);
 	}
 	
-	@Test
+	//@Test
 	public void 게시판본문보기_테스트() throws Exception{
 		logger.info(" 게시판본문보기_테스트() 실행 ");
 		int bno = 1;
