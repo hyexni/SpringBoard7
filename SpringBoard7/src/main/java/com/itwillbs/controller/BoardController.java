@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.itwillbs.domain.BoardVO;
 import com.itwillbs.service.BoardService;
@@ -46,7 +47,8 @@ public class BoardController {
 	
 	// 글쓰기 (정보 처리) / POST
 	@RequestMapping(value = "/regist",method = RequestMethod.POST)
-	public String boardRegistPOST(/* @ModelAttribute */ BoardVO vo) throws Exception {
+	public String boardRegistPOST(/* @ModelAttribute */ BoardVO vo,
+			                       RedirectAttributes rttr) throws Exception {
 		logger.info(" boardRegistPOST() 실행 ");
 		
 		// 글쓰기 동작을 처리
@@ -59,6 +61,12 @@ public class BoardController {
 		bService.boardRegist(vo);
 		
 		// 3) 페이지 이동(게시판 리스트)
+		
+		rttr.addFlashAttribute("result", "createOK");
+		
+		// return "redirect:/board/listALL?data=1234";
+		// model.addAttribute("data","1234");
+		// => 두개의 동작이 동일함 (주소줄로 전달, 계속해서 정보가 남아있음)
 		
 		return "redirect:/board/listALL";
 	}
