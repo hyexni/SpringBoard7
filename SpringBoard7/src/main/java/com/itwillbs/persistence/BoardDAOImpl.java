@@ -57,6 +57,28 @@ public class BoardDAOImpl implements BoardDAO {
 		
 		return boardList;
 	}
+
+
+	@Override
+	public BoardVO boardSelect(int bno) throws Exception {
+		logger.info(" boardSelect(int bno)실행 ");
+				
+		BoardVO resultVO 
+		  = sqlSession.selectOne(NAMESPACE + "getBoard",bno);
+		logger.info(" 결과 : {}",resultVO);
+		
+		return resultVO;
+	}
+
+
+	@Override
+	public void viewcntUpdate(int bno) throws Exception {
+		logger.info(" viewcntUpdate(int bno) 실행 ");
+		sqlSession.update(NAMESPACE + "increaseViewcnt",bno);
+	}
+	
+	
+	
 	
 	
 
