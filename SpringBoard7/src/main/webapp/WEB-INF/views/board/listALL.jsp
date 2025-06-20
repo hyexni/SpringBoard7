@@ -9,6 +9,7 @@
 	
 		<%-- ${boardList } --%>
 		<%--  ${result } --%>
+<%-- 		${updateCheck } --%>
 		<div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">아이티윌 게시판</h3>

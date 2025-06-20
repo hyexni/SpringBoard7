@@ -10,6 +10,7 @@
 	<div class="content">
 	<h1>/board/read.jsp</h1>
 	
+	<%-- 		${updateCheck } --%>
 <%-- 	${boardVO } --%>
 	
 	<div class="box box-primary">
