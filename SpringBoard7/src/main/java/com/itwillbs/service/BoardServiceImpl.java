@@ -59,6 +59,16 @@ public class BoardServiceImpl implements BoardService {
 		return bDao.boardSelect(bno);
 		
 	}
+
+
+	@Override
+	public void increaseViewcnt(int bno) throws Exception {
+		logger.info(" increaseViewcnt(int bno)실행 ");
+		
+		bDao.viewcntUpdate(bno);
+	}
+	
+	
 	
 	
 	
