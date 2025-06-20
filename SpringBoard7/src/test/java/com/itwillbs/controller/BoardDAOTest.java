@@ -69,6 +69,14 @@ public class BoardDAOTest {
 		
 	}
 	
+	//@Test
+	public void 조회수1증가_테스트() throws Exception {
+		
+		int bno = 1 ;
+		bDAo.viewcntUpdate(bno);
+		
+	}
+	
 	
 	
 	
