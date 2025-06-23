@@ -20,6 +20,10 @@
             <!-- /.box-header -->
             
             <!-- form start -->
+			<!-- submit 버튼 클릭시 정보 전달하기위한 폼태그 -->            
+            <form role="form"> <!-- action, method 속성 생략 -->
+            	<input type="hidden" name="bno" value="${boardVO.bno}">
+            </form>
             
               <div class="box-body">
                 <div class="form-group">
@@ -62,7 +66,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">글쓰기</button>
+                <button type="submit" class="btn btn-primary btn-lg">수정</button>
                 <button type="submit" class="btn btn-danger btn-lg">목록</button>
               </div>
            
@@ -83,6 +87,17 @@
 				alert(" 게시판 목록으로 이동합니다! ");
 				// 게시판 목록으로 이동
 				location.href="/board/listALL";				
+			});//click
+			
+			var form = $("form[role='form']");
+			
+			$(".btn-primary").click(function(){
+				// 수정하기 버튼 클릭시 
+				// bno 정보를 가지고 /board/modify 이동
+			    //location.href="/board/modify?bno=${boardVO.bno }";		
+				form.attr("action","/board/modify");
+				form.submit();
+			    
 			});//click
 			
 		});	// ready
