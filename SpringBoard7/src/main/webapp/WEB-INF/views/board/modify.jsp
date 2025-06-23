@@ -21,12 +21,12 @@
             
             <!-- form start -->
 			<!-- submit 버튼 클릭시 정보 전달하기위한 폼태그 -->            
-            <form role="form"> <!-- action, method 속성 생략 -->
+            <form role="form" action="" method="post"> <!-- action, method 속성 생략 -->
             
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">번 호</label>
-                  <input type="text" name="title" class="form-control" 
+                  <input type="text" name="bno" class="form-control" 
                          id="exampleInputEmail1" value="${boardVO.bno }" 
                          readonly="readonly">
                 </div>
