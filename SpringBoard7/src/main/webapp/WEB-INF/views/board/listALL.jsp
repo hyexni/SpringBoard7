@@ -70,6 +70,9 @@
 		if(result == "modifyOK"){
 			alert(" 글 수정 완료! ");
 		}
+		if(result == "deleteOK"){
+			alert(" 글 삭제 완료! ");
+		}
 		
 	</script>
 	
