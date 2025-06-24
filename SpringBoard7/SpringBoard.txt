@@ -95,6 +95,23 @@ Controller -> View -> Controller -> Service/ServiceImpl -> DAO/DAOImpl -> SQL(ma
 		* 1:1 대응 관계 
 
 
+예외처리
+	try{
+		예외가 발생할지도 모르는 코드
+	} catch(Exception e){
+		예외메세지 출력
+	} finally{
+	        예외발생여부와 상관없이 반드시 실행 코드
+	}
+
+
+	 method() throws Exception
+	 => 예외처리를 직접 수행X, 대신 해당 메서드를 호출하는 시점에 예외처리를 수행하도록 설정
+
+
+
+
+
 
 
 
