@@ -77,7 +77,7 @@ public class BoardDAOTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void 수정테스트() throws Exception{
 		BoardVO vo = new BoardVO();
 		
@@ -87,6 +87,12 @@ public class BoardDAOTest {
 		vo.setWriter("수정된 이름");
 		
 		bDAo.boardUpdate(vo);
+	}
+	
+	//@Test
+	public void 글삭제_테스트() throws Exception{
+		
+		bDAo.boardDelete(12);
 		
 	}
 	

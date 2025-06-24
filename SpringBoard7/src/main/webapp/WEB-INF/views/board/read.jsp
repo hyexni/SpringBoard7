@@ -67,6 +67,7 @@
 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary btn-lg">수정</button>
+                <button type="submit" class="btn btn-success btn-lg">삭제</button>
                 <button type="submit" class="btn btn-danger btn-lg">목록</button>
               </div>
            
@@ -97,8 +98,17 @@
 			    //location.href="/board/modify?bno=${boardVO.bno }";		
 				form.attr("action","/board/modify");
 				form.submit();
-			    
 			});//click
+			
+			$(".btn-success").click(function(){
+				// 삭제하기 버튼 클릭시
+				// 글번호를 가지고 삭제 처리 
+				// /board/remove 주소(POST) 호출
+				form.attr("action","/board/remove");
+				form.attr("method","POST");
+				form.submit();				
+			});			
+			
 			
 		});	// ready
 	</script>
